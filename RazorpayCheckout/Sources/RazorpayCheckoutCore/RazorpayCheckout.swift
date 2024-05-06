@@ -14,8 +14,7 @@ extension CheckoutErrors: CustomStringConvertible {
     }
 }
 
-@objc
-public protocol RazorpaySwiftProtocol : NSObjectProtocol {
+@objc public protocol RazorpaySwiftProtocol : NSObjectProtocol {
     
 }
 
