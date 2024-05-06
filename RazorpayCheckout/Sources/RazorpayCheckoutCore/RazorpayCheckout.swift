@@ -1,4 +1,5 @@
 import Razorpay
+import Foundation
 
 enum CheckoutErrors: Error {
     case keyMissing
@@ -47,7 +48,8 @@ public final class RazorpaySwift {
         RazorpaySwift.shared.delegate = delegate
         return RazorpaySwift.shared
     }
-    
+
+    @objc
     public func open(withPayload payload: [AnyHashable: Any]) throws {
         guard let key = self.key else {
             throw CheckoutErrors.keyMissing
