@@ -14,7 +14,8 @@ extension CheckoutErrors: CustomStringConvertible {
     }
 }
 
-public protocol RazorpaySwiftProtocol {
+@objc
+public protocol RazorpaySwiftProtocol : NSObjectProtocol {
     
 }
 
@@ -36,6 +37,12 @@ public final class RazorpaySwift {
     private static let shared: RazorpaySwift = RazorpaySwift()
     
     private init() {}
+    
+    
+    @objc
+    public static func thisIsAbBasicFunction(){
+        
+    }
     
     public static func initWithKey(key: String, andDelegate delegate: PaymentCompletionDelegate) -> RazorpaySwift {
         RazorpaySwift.shared.key = key
