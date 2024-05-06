@@ -29,6 +29,14 @@ public protocol PaymentCompletionWithDataDelegate: RazorpaySwiftProtocol {
     func onPaymentSuccess(_ payment_id: String, andData response: [AnyHashable : Any]?)
 }
 
+@objc public final class MyRazorPaySample : NSObject{
+    
+    @objc
+    public static func thisIsAbBasicFunction(){
+        
+    }
+}
+
 public final class RazorpaySwift {
     
     private var razorpay: RazorpayCheckout?
