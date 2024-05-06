@@ -35,19 +35,19 @@ public final class RazorpaySwift {
     private static let shared: RazorpaySwift = RazorpaySwift()
     
     private init() {}
-    
+    @objc
     public static func initWithKey(key: String, andDelegate delegate: PaymentCompletionDelegate) -> RazorpaySwift {
         RazorpaySwift.shared.key = key
         RazorpaySwift.shared.delegate = delegate
         return RazorpaySwift.shared
     }
-    
+    @objc
     public static func initWithKey(key: String, andDelegateWithData delegate: PaymentCompletionWithDataDelegate) -> RazorpaySwift {
         RazorpaySwift.shared.key = key
         RazorpaySwift.shared.delegate = delegate
         return RazorpaySwift.shared
     }
-    
+    @objc
     public func open(withPayload payload: [AnyHashable: Any]) throws {
         guard let key = self.key else {
             throw CheckoutErrors.keyMissing
