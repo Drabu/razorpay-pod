@@ -1,12 +1,3 @@
-//
-//  File.swift
-//  
-//
-//  Created by Burhan on 06/05/24.
-//
-
-
-// RazorpayBridge.swift
 import Foundation
 import Razorpay
 
